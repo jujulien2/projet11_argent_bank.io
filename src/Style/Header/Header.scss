@@ -3,6 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
+  div{
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 
@@ -33,6 +37,10 @@
   .main-nav-item {
     text-decoration: none;
     margin-right: 0.5rem;
+    display: flex;
+    gap: 5px;
+    flex-direction: row-reverse;
+   cursor: pointer;
   }
   
   .main-nav-item:hover {

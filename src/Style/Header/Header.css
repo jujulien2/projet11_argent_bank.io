@@ -4,6 +4,10 @@
   align-items: center;
   padding: 5px 20px;
 }
+.main-nav div {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 .sr-only {
   border: 0 !important;
@@ -31,6 +35,10 @@
 .main-nav-item {
   text-decoration: none;
   margin-right: 0.5rem;
+  display: flex;
+  gap: 5px;
+  flex-direction: row-reverse;
+  cursor: pointer;
 }
 
 .main-nav-item:hover {

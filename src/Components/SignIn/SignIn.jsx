@@ -1,20 +1,23 @@
 import '../../Style/SignIn/SignIn.css'
 import { submitSignIn } from '../../Actions/Submit.actions';
 import { useDispatch, useSelector } from 'react-redux';
-import SignInReducer from '../../Reducers/Submit.reducer';
-
+import { useNavigate } from 'react-router-dom';
 
 
 const SignIn = () => {
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(submitSignIn(e.target.username.value, e.target.password.value))
 
+
+
     }
+
     const user = useSelector((state) => state.SignInReducer.user)
     if (user) {
-        window.location.href = '/user'
+        navigate('/user')
     }
 
     return (

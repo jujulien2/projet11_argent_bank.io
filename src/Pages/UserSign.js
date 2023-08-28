@@ -4,7 +4,7 @@ import SignIn from '../Components/SignIn/SignIn';
 
 const UserSign = () => {
     return (
-        <Layout isUserLoggedIn={false}>
+        <Layout>
             <SignIn />
         </Layout>
     );

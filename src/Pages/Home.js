@@ -6,7 +6,7 @@ import DescriptionAdvantages from '../Components/HomeAdvantages/DescriptionAdvan
 
 const Home = () => {
     return (
-        <Layout isUserLogginIn={true}>
+        <Layout >
             <Presentation />
             <DescriptionAdvantages />
         </Layout>

@@ -5,7 +5,7 @@ import Header from '../Header/Header.jsx';
 const Layout = (props) => {
     return (
         <>
-            <Header isUserLoggedIn={props.isUserLoggedIn} />
+            <Header />
             {props.children}
             <Footer />
 

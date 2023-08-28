@@ -2,6 +2,7 @@ import React from 'react';
 import '../../Style/Transactions/Transactions.css'
 
 const Transactions = () => {
+
     return (
         <div>
 
