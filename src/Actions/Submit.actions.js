@@ -3,6 +3,7 @@ export const SUBMIT_FORM_SUCCESS = 'SUBMIT_FORM_SUCCESS'
 export const SUBMIT_FORM_ERROR = 'SUBMIT_FORM_ERROR'
 
 
+
 export const submitSignIn = (userName, userPassword) => {
     return (dispatch) => {
         return fetch('http://localhost:3001/api/v1/user/login', {
@@ -16,6 +17,7 @@ export const submitSignIn = (userName, userPassword) => {
             })
         }).then(response => response.json())
             .then(data => {
+                console.log(data);
                 const token = data.body.token;
                 localStorage.setItem('authToken', token);
 

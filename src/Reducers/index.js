@@ -1,8 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import SignInReducer from "./Submit.reducer";
-import EditSubmitReducer from "./EditName.reducer";
+import SignInReducer from "./user.reducer";
+
 
 export default combineReducers({
     SignInReducer,
-    EditSubmitReducer
+
 });

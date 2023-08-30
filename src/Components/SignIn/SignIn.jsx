@@ -2,6 +2,7 @@ import '../../Style/SignIn/SignIn.css'
 import { submitSignIn } from '../../Actions/Submit.actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 const SignIn = () => {
@@ -16,9 +17,11 @@ const SignIn = () => {
     }
 
     const user = useSelector((state) => state.SignInReducer.user)
-    if (user) {
-        navigate('/user')
-    }
+    useEffect(() => {
+        if (user) {
+            navigate("/user")
+        }
+    })
 
     return (
         <main className="main bg-dark">

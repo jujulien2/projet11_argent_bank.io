@@ -1,16 +1,19 @@
 import React from 'react';
 import '../../Style/Header/Header.css'
 import logo from '../../Assets/argentBankLogo.png'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { resetStore } from '../../Actions/LogOutUser.actions';
+
 
 const Header = () => {
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const storedToken = localStorage.getItem('authToken');
     const handleSignOut = () => {
         localStorage.removeItem("authToken");
         localStorage.removeItem("persist:root");
-
+        dispatch(resetStore())
         navigate('../SignIn')
 
     };

@@ -15,6 +15,7 @@ const EditName = () => {
     const handleSubmitUserName = (e) => {
         e.preventDefault()
         dispatch(submitEditName(e.target.username.value));
+        // setIsEditing à false pour ouvrir et fermer au clique du bouton edit Name
         setIsEditing(false)
 
     }
